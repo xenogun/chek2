@@ -1,0 +1,15 @@
+ALGORITHM LTableau
+VAR
+    i,j,arr[],cat:INTEGER
+BEGIN
+    arr=[12, 11, 13, 5, 6]
+    FOR i=1 STEP 1  DO
+        cat=arr[i]
+        j=i-1
+        WHILE (j>=0) AND (arr[j]>cat) DO
+            arr[j+1]=arr[j]
+            j=j-1
+        END_WHILE
+        arr[j+1]=cat
+    END_FOR
+END
